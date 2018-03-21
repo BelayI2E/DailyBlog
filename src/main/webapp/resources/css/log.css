@@ -1,0 +1,45 @@
+.login-form,
+.login-form h1,
+.login-form span,
+.login-form input,
+.login-form label{
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+}
+.login-form{
+	position:relative;
+	width:200px;
+	height:200px;
+	padding:15px 25px 0 25px;
+	margin-top:15px;
+	cursor:default;
+	background-color:#141517;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	-webkit-box-shadow:0px 1px 1px 0px rgba(255,255,255,.2) , inset 0px 1px 1px 0px rgb(0,0,0);
+	-moz-shadow:0px 1px 1px 0px rgba(255, 255, 255,.2),inset 0px 1px 1px 0px rgb(0,0,0);
+	box-shadow:0px 1px 1px 0px rgba(255,255, 255,.2),inset 0px 1px 1px 0px rgb(0,0,0);
+}
+
+.login-form:before{
+	position:absolute;
+	top:-12px;
+	left:10px;
+	width:0px;
+	height:0px;
+	content:'';
+	border-bottom:10px solid #141517;
+	border-right:10px solid #141517;
+	border-top:10px solid transparent;
+	border-left:10px solid transparet;
+}
+.login-form h1{
+	line-height:40px;
+	font-family:'Myriad Pro',sans-serif;
+	font-size:22px;
+	font-weight:normal;
+	color:#e4e4e4;
+}
