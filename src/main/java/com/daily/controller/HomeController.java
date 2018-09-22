@@ -4,15 +4,14 @@ package com.daily.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.daily.model.Post;
+import com.daily.model.User;
 import com.daily.service.PostService;
 import com.daily.service.UserService;
 @Controller
@@ -73,6 +72,15 @@ public class HomeController {
 	@RequestMapping(value="/register",method=RequestMethod.GET)
 	public String register(){
 		return "register";
+	}
+	public ModelAndView  getUsers(){
+		
+		ModelAndView mod= new ModelAndView("new_post");
+		List<User> authors= userService.getAllUsers();
+		mod.addObject("users",authors);
+		return mod;
+		
+		
 	}
 	
 	

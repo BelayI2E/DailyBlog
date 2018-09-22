@@ -43,19 +43,13 @@
 
 		</div>
 		<div class="form-group">
-			<label for="password">Confirm Password</label> <input
-				type="password" class="form-control" name="password">
+			<label for="password">Confirm Password</label> <input type="password"
+				class="form-control" name="password">
 		</div>
 		<div class="form-group">
 			<button class="btn btn-lg btn-primary">Register</button>
 
 		</div>
-
-
-
 	</form>
-
-
-
 </body>
 </html>

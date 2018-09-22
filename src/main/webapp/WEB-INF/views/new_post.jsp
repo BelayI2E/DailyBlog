@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -22,15 +23,16 @@
 		<img src="${pageContext.request.contextPath}/resources/img/heaven.jpg"
 			alt="Image Of Heaven">
 	</div>
-	<form action="${pageContext.request.contextPath }/home/save"
-		 method="POST">
+	<form action="${pageContext.request.contextPath }/save" method="POST"
+		modelAttribute="post">
 		<div class="form-group">
 			<label for="title">Title</label> <input class="form-control"
 				type="text" name="title">
 		</div>
 		<div class="form-group">
 			<label for="body">Body</label>
-			<textarea class="form-control" rows="15" cols="120" id="post" name="body"></textarea>
+			<textarea name="body" class="form-control" rows="15" cols="120" id="post"
+				type="text" ></textarea>
 
 		</div>
 		<div class="form-group">
@@ -38,8 +40,15 @@
 				class="form-control" name="date">
 		</div>
 		<div class="form-group">
-			<label for="authid">Id</label> <input type="text"
-				class="form-control" name="author_id">
+		<label for="id" >Author</label>
+			<select class="form-control">
+				<c:forEach var="user" items="${users}">
+					<option value="${user.getId()}"></option>
+				</c:forEach>
+
+
+			</select>
+
 		</div>
 		<div class="form-group">
 			<button class="btn btn-lg btn-primary">Post</button>
